@@ -3,17 +3,16 @@ import './App.css';
 import Recipe from './Recipe';
   
 const App = () => {
-  const APP_ID = "13245";
-  const APP_KEY = "KEY";
+  
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("chicken");
+  const [query, setQuery] = useState("weeknight");
   useEffect(() => {
     getRecipes();
   }, [query])
   const getRecipes = async () => {
     const response = await fetch
-          (`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
+          (`https://www.foodnetwork.com/recipes/photos/fall-weeknight-dinners#item-13`);
     const data = await response.json();
     setRecipes(data.hits);
     // console.log(data);
