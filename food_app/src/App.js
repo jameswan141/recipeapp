@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './App.css';
 import Recipe from './Recipe';
-  
+
 const App = () => {
   
   const [recipes, setRecipes] = useState([]);
@@ -13,7 +13,7 @@ const App = () => {
   const getRecipes = async () => {
     const response = await fetch(`https://www.foodnetwork.com/recipes/photos/fall-weeknight-dinners#item-13`);
     const data = await response.json();
-    setRecipes(data.hits);// console.log(data);
+    setRecipes(data.hits); // console.log(data);
   };
   const updateSearch = e => {
     setSearch(e.target.value);
