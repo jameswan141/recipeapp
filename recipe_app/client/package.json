@@ -1,7 +1,7 @@
 {
-  "homepage": "http://jameswan141.github.io/foodapp.github.io",
+  "homepage": "https://jameswan141.github.io/foodapp",
   "name": "client",
-  "version": "0.1.0",
+  "version": "2.0.1",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.3",
