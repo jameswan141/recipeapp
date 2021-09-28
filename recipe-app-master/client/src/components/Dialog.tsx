@@ -87,7 +87,7 @@ const DialogComponent: React.FC<any> = (props) => {
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
-      <DialogTitle id="alert-dialog-title">{"Submit a recipe below."}</DialogTitle>
+      <DialogTitle id="alert-dialog-title">{"Submit a recipe below!"}</DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
           <form className={classes.form}>

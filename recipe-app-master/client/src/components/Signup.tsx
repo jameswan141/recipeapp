@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import { TextField } from '@material-ui/core';
 import Loader from 'react-loader-spinner'
+import axios from 'axios';
+import {  TextField } from '@material-ui/core';
 import useStyles from './styles/auth';
 
 // STYLES
 // import './styles/login.scss';
 import { Link } from 'react-router-dom';
 
-const Login: React.FC<any> = (props) => {
+const Signup: React.FC <any> = (props) => {
     const [ user, setUser ] = useState({
         username: "",
         password: ""
     });
+    const classes = useStyles();
     const [ error, setError ] = useState<string>("");
     const [ isLoading, setIsLoading ] = useState<boolean>(false);
-    const classes = useStyles();
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement> ) => { 
         e.preventDefault();
@@ -28,23 +28,23 @@ const Login: React.FC<any> = (props) => {
         if (user.username.length > 0 && user.password.length > 0) {
             setIsLoading(true)
             axios
-            .post(`${process.env.REACT_APP_ROOT_URL}auth/login`, user)
+            .post(`${process.env.REACT_APP_ROOT_URL}auth/signup`, user)
             .then((res) => {
                 setUser({
                     username: "",
                     password: ""
                 })
-                setIsLoading(true)
                 setError("");
+                setIsLoading(false)
                 props.history.push(`/${user.username}`);
             })
             .catch((err) => {
-                console.log(err);
-                setError("An error has occurred. Try again.");
+                setError("There was an error. Try again.");
                 setIsLoading(false)
+                console.log(err);
             })
         } else {
-            setError("Provide your email and password.")
+            setError("Provide email and password")
         }
     };
 
@@ -52,7 +52,7 @@ const Login: React.FC<any> = (props) => {
         <div className={classes.loginContainer}>
             <div className={classes.loginCard}>
                 <form className={classes.form} onSubmit={submitHandler}>
-                    <h2>Log In!</h2>
+                    <h2>Sign Up!</h2>
                     {error ? <p className={classes.error}>{error}</p> : null}
                     <TextField 
                         type="text" 
@@ -83,13 +83,13 @@ const Login: React.FC<any> = (props) => {
                             width={20}
                             timeout={3000} //3 secs
                     
-                         /> : "Log In"
+                         /> : "Sign Up"
                         }
                     </button>
-                    <p>Not a user? <Link to="/">Sign Up</Link></p>
+                    <p>Already a user? <Link to="/login">Log In</Link></p>
                 </form>
             </div>
         </div>
     )
 }
-export default Login;
+export default Signup;
