@@ -39,12 +39,12 @@ const Signup: React.FC <any> = (props) => {
                 props.history.push(`/${user.username}`);
             })
             .catch((err) => {
-                setError("An error occurred. Try again.");
+                setError("There was an error. Try again.");
                 setIsLoading(false)
                 console.log(err);
             })
         } else {
-            setError("Provide your email and password.")
+            setError("Provide email and password")
         }
     };
 
