@@ -1,7 +1,8 @@
 {
+  "homepage": "https://jameswan141.github.com/foodapp"
   "name": "client",
   "version": "0.1.0",
-  "private": true,
+  "public": true,
   "dependencies": {
     "@material-ui/core": "^4.9.5",
     "@testing-library/jest-dom": "^4.2.4",
@@ -18,6 +19,8 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

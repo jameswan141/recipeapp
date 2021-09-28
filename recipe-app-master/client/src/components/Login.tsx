@@ -40,11 +40,11 @@ const Login: React.FC<any> = (props) => {
             })
             .catch((err) => {
                 console.log(err);
-                setError("There was an error. Try again.");
+                setError("An error occurred. Try again.");
                 setIsLoading(false)
             })
         } else {
-            setError("Provide email and password")
+            setError("Provide your email and password.")
         }
     };
 
