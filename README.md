@@ -1,1 +1,1 @@
-NOTE: This app is not completely my work. I would like to give credit to Angel Torres.
+NOTE: Parts of the code are adapted from another source. I would like to give credit to Angel Torres.
