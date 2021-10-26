@@ -44,7 +44,7 @@ const Login: React.FC<any> = (props) => {
                 setIsLoading(false)
             })
         } else {
-            setError("Provide email and password")
+            setError("Provide email and password.")
         }
     };
 
