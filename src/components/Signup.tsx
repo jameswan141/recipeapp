@@ -44,7 +44,7 @@ const Signup: React.FC <any> = (props) => {
                 console.log(err);
             })
         } else {
-            setError("Provide email and password.")
+            setError("Provide your email and password.")
         }
     };
 
