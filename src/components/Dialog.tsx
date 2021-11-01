@@ -115,14 +115,14 @@ const DialogComponent: React.FC<any> = (props) => {
               onChange={changeHandler}
               value={recipe.thumbnailURL}
               variant="outlined" />
-            <h3>Enter ingredients below</h3>
+            <h3>Enter the ingredients below.</h3>
             {
               recipe.ingredients.map((ingredient) => {
                 return <p>{`${ingredient.name} - ${ingredient.quantity}${ingredient.unit}`}</p>
               })
             }
             <IngredientInput addIngredient={addIngredient}/>
-            <h3>Enter instructions below</h3>
+            <h3>Enter the instructions below.</h3>
             {
               recipe.instructions.map((instruction) => {
                 return <p>{`${instruction.description}`}</p>
