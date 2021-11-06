@@ -52,7 +52,7 @@ const Signup: React.FC <any> = (props) => {
         <div className={classes.loginContainer}>
             <div className={classes.loginCard}>
                 <form className={classes.form} onSubmit={submitHandler}>
-                    <h2>Sign Up!</h2>
+                    <h2>Sign Up</h2>
                     {error ? <p className={classes.error}>{error}</p> : null}
                     <TextField 
                         type="text" 

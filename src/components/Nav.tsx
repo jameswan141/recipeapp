@@ -10,7 +10,7 @@ const Nav: React.FC<any> = () => {
     return (
         <nav className={classes.navContainer}>
             <Link className={classes.link} to="/">
-                <h1 className={classes.navItem}>Recipes App</h1>
+                <h1 className={classes.navItem}>Recipe App</h1>
             </Link>
         </nav>
     )
