@@ -1,1 +1,0 @@
-NOTE: Parts of the code are adapted. Credit is given to Angel Torres.
