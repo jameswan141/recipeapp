@@ -79,7 +79,7 @@ const DialogComponent: React.FC<any> = (props) => {
   return (
     <div id="dialog-container">
     <Button className={classes.addRecipeButton} variant="outlined" color="primary" onClick={handleClickOpen}>
-        ADD RECIPE
+        Add Recipe
     </Button>
     <Dialog
       open={open}
@@ -87,7 +87,7 @@ const DialogComponent: React.FC<any> = (props) => {
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
-      <DialogTitle id="alert-dialog-title">{"Submit a recipe below!"}</DialogTitle>
+      <DialogTitle id="alert-dialog-title">{"Submit a recipe below."}</DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
           <form className={classes.form}>
@@ -134,10 +134,10 @@ const DialogComponent: React.FC<any> = (props) => {
       </DialogContent>
       <DialogActions>
         <Button onClick={handleSubmit} color="primary">
-          POST
+          Post
         </Button>
         <Button onClick={handleCancel} color="primary" autoFocus>
-          CANCEL
+          Cancel
         </Button>
       </DialogActions>
     </Dialog>
