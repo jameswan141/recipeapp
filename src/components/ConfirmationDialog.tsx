@@ -33,7 +33,7 @@ const ConfirmationDialog: React.FC<ConfirmationDialogInterface> = (props) => {
   return (
     <div id="dialog-container">
     <Button className={classes.deleteButton} variant="contained" color="secondary" onClick={handleClickOpen}>
-      DELETE
+      Delete
     </Button>
     <Dialog
       open={open}
