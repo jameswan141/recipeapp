@@ -86,7 +86,7 @@ const DialogComponent = (props: any) => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{"Submit a recipe below"}</DialogTitle>
+        <DialogTitle id="alert-dialog-title">{"Submit a recipe below."}</DialogTitle>
         <DialogContent>
           <form className={classes.form}>
             <TextField 
@@ -124,10 +124,10 @@ const DialogComponent = (props: any) => {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleSubmit} type="submit" color="primary">
-            UPDATE
+            Update
           </Button>
           <Button onClick={handleCancel} color="primary" autoFocus>
-            CANCEL
+            Cancel
           </Button>
         </DialogActions>
       </Dialog>
