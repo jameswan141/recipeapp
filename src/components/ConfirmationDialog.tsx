@@ -41,13 +41,13 @@ const ConfirmationDialog: React.FC<ConfirmationDialogInterface> = (props) => {
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
-      <DialogTitle id="alert-dialog-title">{"Are you sure?"}</DialogTitle>
+      <DialogTitle id="alert-dialog-title">{"Are you sure you want to proceed?"}</DialogTitle>
       <DialogActions>
         <Button onClick={handleYes} color="primary">
-            YES
+            Yes
         </Button>
         <Button onClick={handleClose} color="secondary" autoFocus>
-            NO
+            No
         </Button>
       </DialogActions>
     </Dialog>
